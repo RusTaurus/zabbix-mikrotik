@@ -1,18 +1,19 @@
 # Advanced Template Net Mikrotik SNMPv2
 
-Template based on original Template Net Mikrotik SNMPv2 from stock Zabbix 3.4
+Template based on original Template Net Mikrotik SNMPv2 from stock Zabbix 4.0
 
-## Improvements
-* Added main device MAC to inventory
-* Added item "Interface MAC address" for each interface (useful for mac-telnet/mac-winbox in MikroTik)
-* Added unicast pps items and added them to traffic graphs
-* Changed trigger "High bandwidth usage" to operate only on ethernet type interfaces (because speed of other type interfaces determines incorrect in MikroTik)
-* Added Queues Simple discovery with graphs
-* Added IP discovery with ICMP triggers and graphs, for multiwan configurations (discovering all IPs, except regexp)
+## Improvements (after forking)
+* Added limit to Network Interfaces Discovery - discover only interfaces with Comment filled
+* IP Addresses Discovery disabled by default
+* Added Neighbor Discovery rules
+* Added PoE Discovery rules
+* Added License information items
+* Added DHCP lease count
+* Added variuos Health/Environment/Inventory discovery rules and items
 
 ## Installation
 
-Tested on Zabbix 3.4+
+Tested on Zabbix 4.0, RB4011iGS+RM, RBD52G-5HacD2HnD-TC, RB941-2nD.
 
 * At first you need to import `Advanced_Template_Module_Interfaces_SNMPv2.xml`. This module is linked with the main template.
 * Then import  the main module `Advanced_Template_Net_Mikrotik_SNMPv2.xml`
